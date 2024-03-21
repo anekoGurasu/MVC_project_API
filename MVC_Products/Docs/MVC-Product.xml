@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVC-Product</name>
+    </assembly>
+    <members>
+        <member name="T:MVC_Product.Controllers.ProductsController">
+            <summary>
+            Controller pro manipulaci s produkty.
+            </summary>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.#ctor(MVC_Product.DataContext.AppDbContext)">
+            <summary>
+            Inicializuje novou instanci třídy ProductsController s daným kontextem databáze.
+            </summary>
+            <param name="context">Kontext databáze</param>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.InitializeProductsAsync">
+            <summary>
+            Asynchronně inicializuje produkty.
+            </summary>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.Index">
+            <summary>
+            Získává a zobrazuje seznam všech produktů.
+            </summary>
+            <returns>Pohled s načtenými produkty z databáze</returns>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.Details(System.Nullable{System.Int32})">
+            <summary>
+            Zobrazuje detaily konkrétního produktu.
+            </summary>
+            <param name="id">ID produktu</param>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.Create">
+            <summary>
+            Zobrazuje formulář pro vytvoření nového produktu.
+            </summary>
+            <returns>Pohled</returns>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.Create(MVC_Product.Models.Product)">
+            <summary>
+            Ukládá nově vytvořený produkt do databáze.
+            </summary>
+            <param name="product">Nově vytvořený produkt.</param>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.Edit(System.Nullable{System.Int32})">
+            <summary>
+            Zobrazuje formulář pro úpravu produktu s daným ID.
+            </summary>
+            <param name="id">ID produktu.</param>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.Edit(System.Int32,MVC_Product.Models.Product)">
+            <summary>
+            Ukládá upravený produkt do databáze.
+            </summary>
+            <param name="id">ID produktu.</param>
+            <param name="product">Upravený produkt.</param>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Zobrazuje potvrzovací stránku pro smazání produktu s daným ID.
+            </summary>
+            <param name="id">ID produktu</param>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.DeleteConfirmed(System.Int32)">
+            <summary>
+            Odebírá produkt s daným ID z databáze.
+            </summary>
+            <param name="id">ID produktu</param>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.ProductExists(System.Int32)">
+            <summary>
+            Metoda pro ověření existence produktu v databázi podle zadaného ID.
+            </summary>
+            <param name="id">ID produktu</param>
+            <returns>existence produktu v databázi (True/False)</returns>
+        </member>
+        <member name="M:MVC_Product.Controllers.ProductsController.UpdateDatabase(System.Collections.Generic.List{MVC_Product.Models.Product})">
+            <summary>
+            Asynchronní metoda pro aktualizaci databáze na základě seznamu produktů
+            </summary>
+            <param name="products">Seznam produktů</param>
+        </member>
+        <member name="T:MVC_Product.Controllers.UserController">
+            <summary>
+            Controller pro získání informací o uživatelích z API.
+            </summary>
+        </member>
+        <member name="M:MVC_Product.Controllers.UserController.Index">
+            <summary>
+            Akce pro získání seznamu uživatelů
+            </summary>
+            <returns>Pohled uživatelů</returns>
+        </member>
+        <member name="T:MVC_Product.DataContext.AppDbContext">
+            <summary>
+            Třída AppDbContext reprezentuje kontext databáze pro aplikaci.
+            </summary>
+        </member>
+        <member name="M:MVC_Product.DataContext.AppDbContext.#ctor">
+            <summary>
+            Konstruktor třídy, který inicializuje novou instanci třídy AppDbContext.
+            </summary>
+        </member>
+        <member name="M:MVC_Product.DataContext.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{MVC_Product.DataContext.AppDbContext})">
+            <summary>
+            Konstruktor třídy, který inicializuje novou instanci třídy AppDbContext s danými možnostmi konfigurace.
+            </summary>
+            <param name="options">Možnosti konfigurace databázového kontextu.</param>
+        </member>
+        <member name="P:MVC_Product.DataContext.AppDbContext.Products">
+            <summary>
+            Vlastnost Products reprezentuje databázovou sadu pro produkty.
+            </summary>
+        </member>
+        <member name="T:MVC_Product.Migrations.Revert_Product">
+            <inheritdoc />
+        </member>
+        <member name="M:MVC_Product.Migrations.Revert_Product.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MVC_Product.Migrations.Revert_Product.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MVC_Product.Migrations.Revert_Product.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MVC_Product.Migrations.Product">
+            <inheritdoc />
+        </member>
+        <member name="M:MVC_Product.Migrations.Product.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MVC_Product.Migrations.Product.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MVC_Product.Migrations.Product.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MVC_Product.Models.Address">
+            <summary>
+            Třída reprezentující adresu
+            </summary>
+        </member>
+        <member name="T:MVC_Product.Models.Geo">
+            <summary>
+            Třída reprezentující geografické údaje
+            </summary>
+        </member>
+        <member name="T:MVC_Product.Models.Company">
+            <summary>
+            Třída reprezentující společnost
+            </summary>
+        </member>
+        <member name="T:MVC_Product.Models.User">
+            <summary>
+            Třída reprezentující uživatele
+            </summary>
+        </member>
+        <member name="T:MVC_Product.Services.ProductService">
+            <summary>
+            Třída ProductService poskytuje metody pro čtení a zápis produktů do/z textového souboru.
+            </summary>
+        </member>
+        <member name="M:MVC_Product.Services.ProductService.#ctor(System.String)">
+            <summary>
+            Konstruktor třídy, který inicializuje cestu k souboru.
+            </summary>
+            <param name="filePath">Cesta k souboru </param>
+        </member>
+        <member name="M:MVC_Product.Services.ProductService.ReadProductsFromFileAsync">
+            <summary>
+            Asynchronní metoda pro čtení produktů ze souboru
+            </summary>
+            <returns>Seznam produktů</returns>
+        </member>
+        <member name="M:MVC_Product.Services.ProductService.WriteProductsToFileAsync(System.Collections.Generic.List{MVC_Product.Models.Product})">
+            <summary>
+            Asynchronní metoda pro zápis produktů do souboru
+            </summary>
+            <param name="products">Seznam produktů</param>
+        </member>
+    </members>
+</doc>

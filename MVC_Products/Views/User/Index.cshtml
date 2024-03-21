@@ -1,0 +1,35 @@
+﻿@model List<MVC_Product.Models.User>
+@{
+    ViewData["Title"] = "Users";
+}
+<h1>User List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+                <td>@user.Username</td>
+                <td>@user.Email</td>
+                <td>@user.Address.Street, @user.Address.Suite, @user.Address.City, @user.Address.Zipcode</td>
+                <td>@user.Phone</td>
+                <td>@user.Website</td>
+                <td>@user.Company.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

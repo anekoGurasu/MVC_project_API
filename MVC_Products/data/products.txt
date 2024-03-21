@@ -1,0 +1,1 @@
+[{"Id":1,"Name":"Shampoo","Price":5.99},{"Id":2,"Name":"Toothpaste","Price":2.49},{"Id":3,"Name":"Tissues","Price":1.79},{"Id":4,"Name":"Hand soap","Price":3.99},{"Id":5,"Name":"Dishwasher tablets","Price":8.49},{"Id":6,"Name":"Trash bags","Price":6.25},{"Id":7,"Name":"Sponge","Price":0.99},{"Id":8,"Name":"Body lotion","Price":7.75},{"Id":9,"Name":"Sunscreen","Price":10.99}]
